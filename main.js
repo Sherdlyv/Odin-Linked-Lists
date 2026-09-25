@@ -33,6 +33,22 @@ class linkList {
         this.head = newNode;
     }
 
+    size () {
+        if (this.head === null) {
+            return 0;
+        }
+
+        let actual = this.head;
+        let total = 1;
+
+        while (actual.next !== null) {
+            actual = actual.next;
+            total++;
+
+        }
+        return total;
+    }
+
     
 }
 
