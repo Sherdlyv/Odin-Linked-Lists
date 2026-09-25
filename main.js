@@ -5,7 +5,7 @@ class Node {
     }
 }
 
-class linkList {
+export class linkList {
     constructor () {
         this.head = null;
 
@@ -21,9 +21,12 @@ class linkList {
         }
 
         let actualNode = this.head ;
+
         while (actualNode.next !== null) {
              actualNode = actualNode.next;
         }
+
+        return actualNode.next = newNode;
         
     }
 

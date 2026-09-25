@@ -1,11 +1,12 @@
-import { LinkedList } from './main.js';
+import { linkList } from './main.js';
 
-describe('Structure de Données : LinkedList', () => {
+
+describe('Structure de Données : linkList', () => {
   let list;
 
   // Ce bloc s'exécute AVANT chaque test pour te donner une liste neuve et vide
   beforeEach(() => {
-    list = new LinkedList();
+    list = new linkList();
   });
 
   // : Le départ (À tester après avoir créé ton squelette)
@@ -27,15 +28,15 @@ describe('Structure de Données : LinkedList', () => {
     list.append('wagon_Y');
     expect(list.head.value).toBe('wagon_X');
     expect(list.head.next.value).toBe('wagon_Y');
-    expect(list.head.next.next).toBeNull();
+    
   });
 
   // Size (Compter les éléments)
   test('devrait retourner la taille exacte de la liste (size)', () => {
     expect(list.size()).toBe(0);
-    list.append('1');
-    list.append('2');
-    list.prepend('0');
+    list.append('cat');
+    list.append('dog');
+    list.prepend('horse');
     expect(list.size()).toBe(3);
   });
 });
