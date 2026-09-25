@@ -11,6 +11,23 @@ class linkList {
 
     }
 
+     append(value) {
+        const newNode = new Node(value);
+
+        if (this.head === null) {
+            this.head = newNode;
+            return;
+
+        }
+
+        let actualNode = this.head ;
+        while (actualNode.next !== null) {
+             actualNode = actualNode.next;
+        }
+        
+    }
+
+
     
 }
 
