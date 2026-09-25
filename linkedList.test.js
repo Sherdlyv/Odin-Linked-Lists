@@ -39,4 +39,27 @@ describe('Structure de Données : linkList', () => {
     list.prepend('horse');
     expect(list.size()).toBe(3);
   });
+
+
+  test('devrait retourner le premier nœud de la liste (head)', () => {
+    expect(list.head()).toBe(undefined); 
+    
+    list.append('wagon_A');
+    list.append('wagon_B');
+    
+    expect(list.head().value).toBe('wagon_A');
+  });
+
+  test('devrait retourner le tout dernier nœud de la liste (tail)', () => {
+    expect(list.tail()).toBe('undefined'); 
+    
+    list.append('wagon_A');
+    list.append('wagon_B');
+    list.append('wagon_C');
+    
+    expect(list.tail().value).toBe('wagon_C');
+    expect(list.tail().next).toBeNull(); 
+  });
+
+
 });

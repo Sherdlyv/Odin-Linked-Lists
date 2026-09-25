@@ -52,6 +52,24 @@ export class linkList {
         return total;
     }
 
+    head () {
+        if (this.head === null) return undefined;
+
+        return this.head;
+        
+    }
+
+    tail () {
+        if (this.head === null) return undefined;
+
+        let actual = this.head;
+
+        while(actual.next !== null) {
+            actual =actual.next;
+        }
+        return actual;
+    }
+
     
 }
 
