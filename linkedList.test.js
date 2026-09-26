@@ -73,7 +73,18 @@ describe('Structure de Données : linkList', () => {
     expect(list.at(5)).toBeUndefined(); 
   });
 
-  
+  test('devrait supprimer le premier élément de la liste et renvoyer sa valeur', () => {
+    expect(list.pop()).toBeUndefined(); 
+
+    list.append('A');
+    list.append('B');
+    
+    const valeur = list.pop(); 
+    expect(valeur).toBe('A');
+    expect(list.headSearch().value).toBe('B'); 
+    expect(list.size()).toBe(1);
+  });
+
 
 
 });

@@ -93,16 +93,12 @@ export class linkList {
     pop () {
         if (this.head === null) return undefined;
 
-        let actual = this.head;
-        let compt = 0;
+        const delValue = this.head.value ;
 
-        while (actual !== null) {
-            if(actual === compt) {
-                this.pop.actual;
-                return actual;
-            }
-        }
-        actual.next = actual;
+        this.head = this.head.next;
+
+        return delValue;
+        
     }
 
     
