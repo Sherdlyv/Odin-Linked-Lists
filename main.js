@@ -52,7 +52,7 @@ export class linkList {
         return total;
     }
 
-    head () {
+    headSearch () {
         if (this.head === null) return undefined;
 
         return this.head;
@@ -68,6 +68,41 @@ export class linkList {
             actual =actual.next;
         }
         return actual;
+    }
+
+    at(index) {
+         if (this.head === null) return undefined;
+
+         let actual = this.head;
+         let compt = 0;
+
+         while (actual !== null) {
+            if (index === compt) return actual;
+
+
+            actual = actual.next;
+            compt++;
+
+         }
+
+          return undefined;
+
+
+    }
+
+    pop () {
+        if (this.head === null) return undefined;
+
+        let actual = this.head;
+        let compt = 0;
+
+        while (actual !== null) {
+            if(actual === compt) {
+                this.pop.actual;
+                return actual;
+            }
+        }
+        actual.next = actual;
     }
 
     

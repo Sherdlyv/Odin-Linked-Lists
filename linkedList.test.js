@@ -42,16 +42,16 @@ describe('Structure de Données : linkList', () => {
 
 
   test('devrait retourner le premier nœud de la liste (head)', () => {
-    expect(list.head()).toBe(undefined); 
+    expect(list.headSearch()).toBeUndefined(); 
     
     list.append('wagon_A');
     list.append('wagon_B');
     
-    expect(list.head().value).toBe('wagon_A');
+    expect(list.headSearch().value).toBe('wagon_A');
   });
 
   test('devrait retourner le tout dernier nœud de la liste (tail)', () => {
-    expect(list.tail()).toBe('undefined'); 
+    expect(list.tail()).toBeUndefined(); 
     
     list.append('wagon_A');
     list.append('wagon_B');
@@ -60,6 +60,20 @@ describe('Structure de Données : linkList', () => {
     expect(list.tail().value).toBe('wagon_C');
     expect(list.tail().next).toBeNull(); 
   });
+
+  test('devrait retourner le nœud à un index spécifique', () => {
+    expect(list.at(0)).toBeUndefined();
+    
+    list.append('A');
+    list.append('B');
+    list.append('C');
+    
+    expect(list.at(0).value).toBe('A');
+    expect(list.at(1).value).toBe('B');
+    expect(list.at(5)).toBeUndefined(); 
+  });
+
+  
 
 
 });
